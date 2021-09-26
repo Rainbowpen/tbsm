@@ -430,6 +430,7 @@ runSession() {
       ;;
     S)  # X Sessions
       if [[ $runInTTY ]]; then
+        XDG_SESSION_TYPE=X11
         info "Run command: startx ${bin[@]} -- ${XserverArg[@]}"
         startx ${bin[@]} -- ${XserverArg[@]}
       else
